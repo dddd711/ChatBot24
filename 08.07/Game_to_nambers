@@ -1,0 +1,13 @@
+import telebot
+import random
+
+
+BOT=telebot.TeLeBot('6599412120:AAGsMx7wSNGgZvDk2rSkuKMzuUeFcfSpjDQ') 
+global femb
+femb=random.randint(56,73)
+@bot.message_handler(command=['start'])
+def start(m,res=False):
+    bot.send_message(m.chat.id,'quess my number...')
+@bot.message_handler(command=['help'])
+def help(m,res=False):
+    bot.send_message(m.chat.id,'you must quess number 56-73')
